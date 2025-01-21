@@ -27,8 +27,22 @@ class Student extends Person {
   //view student details
   viewDetails() {
     const average = this.calculateAverage().toFixed(2); // to 2 decimal places
-    return `${this.describePerson()}, Grades: [${
+    return `${this.tellAboutPerson()}, Grades: [${
       this.grades
     }], Average Grade: ${average}`;
   }
 }
+
+//store all students in an array
+const students = [];
+
+// Add a new student
+function addStudent(name, ID, grades) {
+  const student = new Student(name, ID, grades); // Create a new student
+  students.push(student); // Add the student to the array
+  console.log(`Student added: ${student.tellAboutPerson()}`);
+}
+
+// Add some students
+addStudent("John Doe", 101, [90, 80, 85]);
+addStudent("Jane Smith", 102, [88, 92, 76]);
