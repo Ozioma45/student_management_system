@@ -43,6 +43,21 @@ function addStudent(name, ID, grades) {
   console.log(`Student added: ${student.tellAboutPerson()}`);
 }
 
+// Find and view a student's details
+function viewStudent(ID) {
+  const student = students.find((s) => s.ID === ID); // Find student by ID
+  if (student) {
+    console.log(student.viewDetails());
+  } else {
+    console.log(`Student with ID ${ID} not found.`);
+  }
+}
+
 // Add some students
-addStudent("John Doe", 101, [90, 80, 85]);
-addStudent("Jane Smith", 102, [88, 92, 76]);
+addStudent("Ozioma John", 101, [90, 80, 85]);
+addStudent("Ebuka Nnams", 102, [88, 92, 76]);
+
+// View details of a student
+viewStudent(101); // View Ozioma John
+viewStudent(102); // View Ebuka Nnams
+viewStudent(103); // Try viewing a student that doesn't exist
