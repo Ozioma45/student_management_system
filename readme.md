@@ -54,8 +54,8 @@ Here's how to use the Student Management System:
 // Import or paste the classes and functions into your project
 
 // Add students
-addStudent("John Doe", 101, [90, 80, 85]);
-addStudent("Jane Smith", 102, [88, 92, 76]);
+addStudent("Ozioma John", 101, [90, 80, 85]);
+addStudent("Ebuka Nnams", 102, [88, 92, 76]);
 
 // View student details
 viewStudent(101); // Displays details of John Doe
